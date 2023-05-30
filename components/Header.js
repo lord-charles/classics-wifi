@@ -16,8 +16,10 @@ const Header = () => {
       <div className="flex lg:justify-end md:justify-end xxs:justify-between w-full">
         <div className=" flex justify-between relative top-[13px] lg:pr-[320px] md:pr-[20px]">
           <TemporaryDrawer />
-          <IconButton className="text-[14px] text-white rounded-md">
-            <p>CALL TO ORDER @ 0740315545 | 0705881279</p>
+          <IconButton className="text-[14px] rounded-md">
+            <p className="text-white font-serif">
+              CALL TO ORDER @ 0740315545 | 0705881279
+            </p>
           </IconButton>
         </div>
       </div>
@@ -30,15 +32,22 @@ const Header = () => {
 
         <div className="flex space-x-3 items-baseline xxs:invisible md:visible lg:visible">
           <IconButton className="text-white rounded-md">
-            {" "}
-            <Link href={"/"}>Home</Link>
-          </IconButton>
-          <IconButton className="text-white rounded-md">Help</IconButton>
-          <IconButton className="text-white rounded-md">
-            <Link href={"/login"}>Login</Link>
+            <Link href={"/"}>
+              <p className="text-white ">Home</p>
+            </Link>
           </IconButton>
           <IconButton className="text-white rounded-md">
-            <Link href={"/register"}>Register</Link>
+            <p className="text-white ">Help</p>
+          </IconButton>
+          <IconButton className="text-white rounded-md">
+            <Link href={"/login"}>
+              <p className="text-white ">Login</p>
+            </Link>
+          </IconButton>
+          <IconButton className="text-white rounded-md">
+            <Link href={"/register"}>
+              <p className="text-white ">Register</p>
+            </Link>
           </IconButton>
         </div>
       </div>

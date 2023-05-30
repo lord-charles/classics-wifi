@@ -30,12 +30,12 @@ const Footer = () => {
             />
 
             <span>
-              <IconButton
-                className="text-white  px-3  h-[43px] relative left-[6px] flex items-center rounded-md text-[15px] hover:bg-gray-900"
+              <div
+                className="text-white  px-3  h-[43px] relative left-[6px] flex items-center rounded-md text-[15px] hover:bg-gray-900 "
                 style={{ backgroundColor: "#280351" }}
               >
-                <p>Subscribe</p>
-              </IconButton>
+                <p className="text-white">Subscribe</p>
+              </div>
             </span>
           </div>
         </div>
