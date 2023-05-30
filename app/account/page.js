@@ -123,7 +123,7 @@ const page = () => {
                       variant="outlined"
                       fullWidth
                       color="inherit"
-                      className=" p-2"
+                      className="text-purple-600 p-2"
                     >
                       <p className="text-purple-600">Claim Mpesa Payment</p>
                     </Button>
@@ -206,7 +206,7 @@ const page = () => {
                       variant="outlined"
                       fullWidth
                       color="inherit"
-                      className=" p-2"
+                      className="text-purple-600 p-2"
                     >
                       <p className="text-purple-600">Edit Profile</p>
                     </Button>
