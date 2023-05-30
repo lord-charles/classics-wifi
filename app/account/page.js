@@ -11,7 +11,7 @@ import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 const page = () => {
   return (
     <div className="min-h-[100vh] overflow-hidden">
-      <div className="mt-[143px]" style={{ backgroundColor: "#280351" }}>
+      <div className="mt-[138px]" style={{ backgroundColor: "#280351" }}>
         {/* hero  */}
         <div className="lg:flex md:flex xxs:flex xxs:flex-col md:flex-row lg:flex-row  justify-between items-center lg:mx-[320px] md:mx-[10px] xxs:mx-[5px]">
           <div>
