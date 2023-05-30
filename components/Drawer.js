@@ -44,7 +44,7 @@ export default function TemporaryDrawer() {
     >
       <List className="bg-gray-200">
         <div className="flex justify-evenly">
-          <div className="flex flex-col items-center">
+          <Link href={"/"} className="flex flex-col items-center">
             <Image
               src={"/images2/home2.png"}
               height={30}
@@ -52,8 +52,8 @@ export default function TemporaryDrawer() {
               alt="image"
             />
             <p>Home</p>
-          </div>
-          <Link href={"/account"} className="flex flex-col items-center">
+          </Link>
+          <Link href={"/login"} className="flex flex-col items-center">
             <Image
               src={"/images2/user.png"}
               height={30}
