@@ -17,7 +17,7 @@ const Header = () => {
         <div className=" flex justify-between relative top-[13px] lg:pr-[320px] md:pr-[20px]">
           <TemporaryDrawer />
           <IconButton className="text-[14px] rounded-md">
-            <p className="text-white font-serif xxs:text-[15px] md:text-[20px] lg:text-[20px]">
+            <p className="text-white font-serif xxs:text-[13px] md:text-[20px] lg:text-[20px]">
               CALL TO ORDER @ 0740315545 | 0705881279
             </p>
           </IconButton>
