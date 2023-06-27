@@ -1,10 +1,41 @@
 "use client";
+import config from "@/utils/axiosconfig";
+import { base_url } from "@/utils/baseUrl";
 import { packages } from "@/utils/data";
 import { Button } from "@mui/material";
+import axios from "axios";
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
+
+const token =
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDIwMDI1ZDJmYWQ2OWIwNzM3MDBhYjgiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2ODYzMTIwMTEsImV4cCI6MTc3MjcxMjAxMX0.r_KLvrWa-BotpCsysEUbRs2iccwetr4SXQ4OcuOqKCA";
 
 const Packages = () => {
+  const [amount, setAmount] = useState(1);
+  const paymentData = {
+    phone_number: `254${740315545}`,
+    amount,
+  };
+
+  const payNow = async () => {
+    console.log("starting payment");
+    try {
+      const api = axios.create({
+        baseURL: base_url,
+        headers: config(token).headers,
+      });
+
+      const res = await api.post(`/payment`, paymentData);
+      console.log(res);
+
+      if (res.data.invoice.state === "PENDING") {
+        console.log("success", res.data.invoice);
+      }
+      console.log(res.data);
+    } catch (err) {
+      console.log(err);
+    }
+  };
   return (
     <div className="bg-gray-100 overflow-hidden w-screen">
       <div className="lg:mx-[300px] md:mx-[10px]">
@@ -69,7 +100,11 @@ const Packages = () => {
                     <p className="text-black">{item.period}</p>
                   </div>
                   <div className="text-purple-700 mt-[15px]">
-                    <Button variant="outlined" color="inherit">
+                    <Button
+                      variant="outlined"
+                      color="inherit"
+                      onClick={() => payNow()}
+                    >
                       Order now
                     </Button>
                   </div>
