@@ -95,7 +95,9 @@ export default function NestedModal({ open, setOpen, data }) {
   };
 
   const payNow = async () => {
-    console.log("starting payment");
+    if (phoneNumber.length < 9 || phoneNumber.length > 9) {
+      return toast.error("invalid phone number!");
+    }
     try {
       const api = axios.create({
         baseURL: base_url,
@@ -191,7 +193,7 @@ export default function NestedModal({ open, setOpen, data }) {
               <Button
                 variant="contained"
                 color="inherit"
-                className="text-green-500 bg-green-500 "
+                className="text-green-500 bg-green-500 hover:bg-green-500"
                 onClick={() => payNow()}
               >
                 <h2 className="text-white font-bold">Pay now</h2>
