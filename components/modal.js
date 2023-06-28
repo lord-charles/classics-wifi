@@ -2,7 +2,7 @@ import * as React from "react";
 import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
 import Button from "@mui/material/Button";
-import { InputAdornment, TextField } from "@mui/material";
+import { IconButton, InputAdornment, TextField } from "@mui/material";
 import { useState } from "react";
 import { base_url } from "@/utils/baseUrl";
 import config from "@/utils/axiosconfig";
@@ -190,14 +190,14 @@ export default function NestedModal({ open, setOpen, data }) {
             />
 
             <div className="mt-2">
-              <Button
-                variant="contained"
-                color="inherit"
-                className="text-green-500 bg-green-500 hover:bg-green-500"
-                onClick={() => payNow()}
-              >
-                <h2 className="text-white font-bold">Pay now</h2>
-              </Button>
+              <IconButton className="text-[15px] p-0 rounded-md">
+                <div
+                  className="text-green-500 bg-green-500 hover:bg-green-500 w-fit px-2 py-1.5 rounded-md"
+                  onClick={() => payNow()}
+                >
+                  <h2 className="text-white font-bold">Pay now</h2>
+                </div>
+              </IconButton>
             </div>
           </div>
         </Box>
