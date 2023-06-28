@@ -12,7 +12,7 @@ const Home = () => {
         toastOptions={{
           // Define default options
           className: "",
-          duration: 10000,
+          duration: 15000,
         }}
       />
 

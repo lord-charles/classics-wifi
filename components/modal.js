@@ -121,7 +121,6 @@ export default function NestedModal({ open, setOpen, data }) {
   };
   return (
     <div>
-      <Button onClick={handleOpen}>Open modal</Button>
       <Modal
         open={open}
         onClose={handleClose}
@@ -190,12 +189,12 @@ export default function NestedModal({ open, setOpen, data }) {
 
             <div className="mt-2">
               <Button
-                variant="outlined"
+                variant="contained"
                 color="inherit"
-                className="text-green-500 "
+                className="text-green-500 bg-green-500 "
                 onClick={() => payNow()}
               >
-                Pay now
+                <h2 className="text-white font-bold">Pay now</h2>
               </Button>
             </div>
           </div>
