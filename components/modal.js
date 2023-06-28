@@ -82,7 +82,7 @@ export default function NestedModal({ open, setOpen, data }) {
           return (
             sendCode(),
             toast.success(
-              "Transaction completed. Voucher will be sent via SMS. Thank you."
+              "Transaction completed. Voucher will be sent via SMS within 10min. Thank you."
             )
           );
         default:
