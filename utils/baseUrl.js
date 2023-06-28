@@ -1,1 +1,1 @@
-export const base_url = 'https://odd-lime-ox-robe.cyclic.app/';
+export const base_url = "https://drab-gray-antelope-tutu.cyclic.app/";

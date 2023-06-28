@@ -3,10 +3,19 @@ import { Hero, Packages, Custom, Tabs } from "@/components";
 import { Divider } from "@mui/material";
 import Image from "next/image";
 import React from "react";
+import { Toaster } from "react-hot-toast";
 
 const Home = () => {
   return (
     <div className="min-h-[70vh] overflow-hidden w-screen">
+      <Toaster
+        toastOptions={{
+          // Define default options
+          className: "",
+          duration: 10000,
+        }}
+      />
+
       <Hero />
       <Packages />
       <Custom />

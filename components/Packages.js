@@ -6,38 +6,33 @@ import { Button } from "@mui/material";
 import axios from "axios";
 import Image from "next/image";
 import React, { useState } from "react";
+import NestedModal from "./modal";
 
 const token =
   "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDIwMDI1ZDJmYWQ2OWIwNzM3MDBhYjgiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2ODYzMTIwMTEsImV4cCI6MTc3MjcxMjAxMX0.r_KLvrWa-BotpCsysEUbRs2iccwetr4SXQ4OcuOqKCA";
 
 const Packages = () => {
   const [amount, setAmount] = useState(1);
-  const paymentData = {
-    phone_number: `254${740315545}`,
-    amount,
+  const [open, setOpen] = useState(false);
+  const [bandwidth, setBandwidth] = useState(0);
+  const [price, setPrice] = useState(0);
+  const [speed, setSpeed] = useState(0);
+  const [validity, setValidity] = useState(0);
+
+  const data = { bandwidth, price, speed, validity };
+  // console.log(data);
+
+  const wifipackage = ({ bandwidth, price, speed, validity }) => {
+    setBandwidth(bandwidth);
+    setPrice(price);
+    setSpeed(speed);
+    setValidity(validity);
+    setOpen(true);
   };
 
-  const payNow = async () => {
-    console.log("starting payment");
-    try {
-      const api = axios.create({
-        baseURL: base_url,
-        headers: config(token).headers,
-      });
-
-      const res = await api.post(`/payment`, paymentData);
-      console.log(res);
-
-      if (res.data.invoice.state === "PENDING") {
-        console.log("success", res.data.invoice);
-      }
-      console.log(res.data);
-    } catch (err) {
-      console.log(err);
-    }
-  };
   return (
     <div className="bg-gray-100 overflow-hidden w-screen">
+      <NestedModal setOpen={setOpen} open={open} data={data} />
       <div className="lg:mx-[300px] md:mx-[10px]">
         <p className="text-black text-center pt-4 font-serif">
           Prefer to order by phone? <a href="#">0740315545 | 0705881279.</a>
@@ -67,7 +62,9 @@ const Packages = () => {
                 </p>
                 <p className="text-black text-[25px] font-bold">
                   Ksh {item.price}{" "}
-                  <a className="text-[20px] relative top-[-3px]">/ month</a>
+                  <a className="text-[20px] relative top-[-3px]">
+                    / {item.validity}
+                  </a>
                 </p>
                 <p className="text-black">+ free installation</p>
                 <div>
@@ -103,7 +100,19 @@ const Packages = () => {
                     <Button
                       variant="outlined"
                       color="inherit"
-                      onClick={() => payNow()}
+                      onClick={() =>
+                        wifipackage({
+                          price: item.price,
+                          bandwidth: item.period,
+                          speed: item.speed,
+                          validity:
+                            item.validity === "month"
+                              ? "30days"
+                              : item.validity === "week"
+                              ? "7days"
+                              : item.validity,
+                        })
+                      }
                     >
                       Order now
                     </Button>
