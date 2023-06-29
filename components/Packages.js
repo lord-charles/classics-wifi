@@ -66,7 +66,7 @@ const Packages = () => {
                   className=""
                 />
                 <p className="text-black font-serif">Up to</p>
-                <p className="text-black  text-[30px]">{item.speed} Mbps</p>
+                <p className="text-black  text-[30px]">{item.period}</p>
                 <p className="text-black text-[14px]">
                   Upload & download speed
                 </p>
@@ -104,7 +104,7 @@ const Packages = () => {
                       height={10}
                       alt="images"
                     />
-                    <p className="text-black">{item.period}</p>
+                    <p className="text-black">{item.speed}Mbps(speed)</p>
                   </div>
                   <div className="text-purple-700 mt-[15px]">
                     <Button
@@ -120,6 +120,12 @@ const Packages = () => {
                               ? "30days"
                               : item.validity === "week"
                               ? "7days"
+                              : item.validity === "24hour"
+                              ? "24hours"
+                              : item.validity === "3hour"
+                              ? "3hours"
+                              : item.validity === "hour"
+                              ? "hour"
                               : item.validity,
                         })
                       }
