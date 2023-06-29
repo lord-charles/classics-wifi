@@ -48,7 +48,10 @@ const Custom = () => {
                   className=""
                 />
                 <p className="text-black font-serif">Up to</p>
-                <p className="text-black  text-[30px]">{item.period}</p>
+                <p className="text-black  text-[30px]">
+                  {item.period} for{" "}
+                  {item.validity === "hour" ? "1 hour" : item.validity}
+                </p>
                 <p className="text-black text-[14px]">
                   Upload & download speed
                 </p>
