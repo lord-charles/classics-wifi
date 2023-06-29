@@ -228,8 +228,6 @@ const page = () => {
                     width="640"
                     height="360"
                     className="xxs:w-screen xxs:h-[200px] md:w-[640px] lg:w-[640px] md:h-[400px] lg:h-[400px] object-contain"
-                    frameborder="0"
-                    allowfullscreen
                   ></iframe>
                   <div className="">
                     <div

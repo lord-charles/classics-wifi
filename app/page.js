@@ -2,17 +2,26 @@
 import { Hero, Packages, Custom, Tabs } from "@/components";
 import { Divider } from "@mui/material";
 import Image from "next/image";
-import React from "react";
+import React, { useEffect } from "react";
 import { Toaster } from "react-hot-toast";
 
 const Home = () => {
+  function scrollToTop() {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  }
+  useEffect(() => {
+    scrollToTop();
+  }, []);
   return (
-    <div className="min-h-[70vh] overflow-hidden w-screen">
+    <div className=" overflow-hidden w-screen">
       <Toaster
         toastOptions={{
           // Define default options
           className: "",
-          duration: 15000,
+          duration: 10000,
         }}
       />
 
@@ -31,8 +40,6 @@ const Home = () => {
               width="640"
               height="360"
               className="xxs:w-screen xxs:h-[200px] md:w-[640px] lg:w-[640px] md:h-[400px] lg:h-[400px] object-contain"
-              frameborder="0"
-              allowfullscreen
             ></iframe>
             <div className="">
               <div

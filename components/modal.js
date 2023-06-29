@@ -190,11 +190,11 @@ export default function NestedModal({ open, setOpen, data }) {
             />
 
             <div className="mt-2">
-              <IconButton className="text-[15px] p-0 rounded-md">
-                <div
-                  className="text-green-500 bg-green-500 hover:bg-green-500 w-fit px-2 py-1.5 rounded-md"
-                  onClick={() => payNow()}
-                >
+              <IconButton
+                className="text-[15px] p-0 rounded-md"
+                onClick={() => payNow()}
+              >
+                <div className="text-green-500 bg-green-500 hover:bg-green-500 w-fit px-2 py-1.5 rounded-md">
                   <h2 className="text-white font-bold text-[17px]">Pay now</h2>
                 </div>
               </IconButton>

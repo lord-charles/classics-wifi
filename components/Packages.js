@@ -2,11 +2,12 @@
 import config from "@/utils/axiosconfig";
 import { base_url } from "@/utils/baseUrl";
 import { packages } from "@/utils/data";
-import { Button } from "@mui/material";
+import { Button, IconButton } from "@mui/material";
 import axios from "axios";
 import Image from "next/image";
 import React, { useState } from "react";
 import NestedModal from "./modal";
+import Link from "next/link";
 
 const token =
   "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDIwMDI1ZDJmYWQ2OWIwNzM3MDBhYjgiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2ODYzMTIwMTEsImV4cCI6MTc3MjcxMjAxMX0.r_KLvrWa-BotpCsysEUbRs2iccwetr4SXQ4OcuOqKCA";
@@ -20,7 +21,6 @@ const Packages = () => {
   const [validity, setValidity] = useState(0);
 
   const data = { bandwidth, price, speed, validity };
-  // console.log(data);
 
   const wifipackage = ({ bandwidth, price, speed, validity }) => {
     setBandwidth(bandwidth);
@@ -40,6 +40,16 @@ const Packages = () => {
         <p className="text-black text-[40px] font-serif font-bold text-center ">
           How much speed do you need?
         </p>
+        <div className="flex justify-center">
+          <IconButton className="rounded-md">
+            <Link
+              href={"http://charles.net/login"}
+              className="text-green-500 text-[25px] font-bold font-serif border border-green-500 p-1 rounded-md"
+            >
+              Connect now
+            </Link>
+          </IconButton>
+        </div>
 
         <div className="grid  md:grid-cols-3 lg:grid-cols-3 xxs:grid-cols-2 place-items-center mt-8">
           {packages.map((item, index) => {
