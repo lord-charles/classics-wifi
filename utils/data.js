@@ -58,7 +58,7 @@ export const packages = [
 export const packages2 = [
   {
     speed: "10",
-    price: "20 for 1Hour",
+    price: "5",
     devices: "2",
     streaming: "light",
     period: "Unlimited",
@@ -67,7 +67,7 @@ export const packages2 = [
   },
   {
     speed: "10",
-    price: "40 for 3Hours",
+    price: "40",
     devices: "4",
     period: "Unlimited",
     streaming: "light",
@@ -76,7 +76,7 @@ export const packages2 = [
   },
   {
     speed: "10",
-    price: "20 for 24Hours",
+    price: "20",
     devices: "4",
     period: "4 Gb",
     streaming: "light",

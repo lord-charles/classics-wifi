@@ -56,6 +56,8 @@ export default function NestedModal({ open, setOpen, data }) {
     validity: data.validity,
     bandwidth: data.bandwidth,
   };
+
+  console.log(smsData);
   const sendCode = async () => {
     const res = await axios.post(`${base_url}/sms`, smsData);
     console.log(res.data);

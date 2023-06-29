@@ -3,10 +3,31 @@ import { packages2 } from "@/utils/data";
 import { Button } from "@mui/material";
 import Image from "next/image";
 import React from "react";
+import NestedModal from "./modal";
+import { useState } from "react";
 
 const Custom = () => {
+  const [open, setOpen] = useState(false);
+  const [bandwidth, setBandwidth] = useState(0);
+  const [price, setPrice] = useState(0);
+  const [speed, setSpeed] = useState(0);
+  const [validity, setValidity] = useState(0);
+
+  const data = { bandwidth, price, speed, validity };
+  console.log(data);
+
+  const wifipackage = ({ bandwidth, price, speed, validity }) => {
+    setBandwidth(bandwidth);
+    setPrice(price);
+    setSpeed(speed);
+    setValidity(validity);
+    setOpen(true);
+  };
+
   return (
     <div className="bg-gray-100 overflow-hidden w-screen">
+      <NestedModal setOpen={setOpen} open={open} data={data} />
+
       <div className="lg:mx-[300px] md:mx-[10px] relative top-[20px]">
         <p className="text-black text-[40px] font-serif font-bold text-center ">
           Get more customized packages from us.
@@ -65,7 +86,30 @@ const Custom = () => {
                     <p className="text-black">{item.speed}Mbps(speed)</p>
                   </div>
                   <div className="text-purple-700 mt-[15px]">
-                    <Button variant="outlined" color="inherit">
+                    <Button
+                      variant="outlined"
+                      color="inherit"
+                      onClick={() =>
+                        wifipackage({
+                          price: item.price,
+                          bandwidth:
+                            item.period === "Unlimited" ? "50Gb" : item.period,
+                          speed: item.speed,
+                          validity:
+                            item.validity === "month"
+                              ? "30days"
+                              : item.validity === "week"
+                              ? "7days"
+                              : item.validity === "24hour"
+                              ? "24hours"
+                              : item.validity === "3hour"
+                              ? "3hours"
+                              : item.validity === "hour"
+                              ? "hour"
+                              : item.validity,
+                        })
+                      }
+                    >
                       Order now
                     </Button>
                   </div>
