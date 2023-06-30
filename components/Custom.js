@@ -29,7 +29,7 @@ const Custom = () => {
       <NestedModal setOpen={setOpen} open={open} data={data} />
 
       <div className="lg:mx-[300px] md:mx-[10px] relative top-[20px]">
-        <p className="text-black text-[40px] font-serif font-bold text-center ">
+        <p className="text-black text-[30px] font-serif font-bold text-center ">
           Get more customized packages from us.
         </p>
 
@@ -48,13 +48,17 @@ const Custom = () => {
                   className=""
                 />
                 <p className="text-black font-serif">Up to</p>
-                <p className="text-black  text-[30px]">
+                <p className="text-black  text-[30px] text-center">
                   {item.period} for{" "}
-                  {item.validity === "hour" ? "1 hour" : item.validity}
+                  {item.validity === "hour"
+                    ? "1hour"
+                    : item.validity === "3hour"
+                    ? "3hours"
+                    : item.validity === "24hour"
+                    ? "24hours"
+                    : item.validity}
                 </p>
-                <p className="text-black text-[14px]">
-                  Upload & download speed
-                </p>
+
                 <p className="text-black text-[20px] font-bold">
                   Ksh {item.price}{" "}
                 </p>

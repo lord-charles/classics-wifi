@@ -22,8 +22,8 @@ const Hero = () => {
             when you switch to Lumos 100% Fiber Optic Internet*
           </p>
           <p className="lg:text-[15px] md:text-[12px] xxs:text-[11px] xxs:mr-[100px]">
-            †Eligible on 10 Mbps plans.*100% Fiber Optic network only available
-            in Classics expansion market.
+            †Eligible on (130gb) 20 Mbps plans.*100% Fiber Optic network only
+            available in Classics expansion market.
           </p>
         </div>
 

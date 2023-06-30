@@ -37,7 +37,7 @@ const Packages = () => {
         <p className="text-black text-center pt-4 font-serif">
           Prefer to order by phone? <a href="#">0740315545 | 0705881279.</a>
         </p>
-        <p className="text-black text-[40px] font-serif font-bold text-center ">
+        <p className="text-black text-[30px] font-serif font-bold text-center ">
           How much speed do you need?
         </p>
         <div className="flex justify-center">
@@ -55,7 +55,7 @@ const Packages = () => {
           {packages.map((item, index) => {
             return (
               <div
-                className="flex flex-col items-center space-y-3 border p-8 border-purple-500 bg-white rounded-md mb-6 shadow-md"
+                className="flex flex-col items-center space-y-3 border p-7 border-purple-500 bg-white rounded-md mb-6 shadow-md"
                 key={index}
               >
                 <Image
@@ -67,12 +67,10 @@ const Packages = () => {
                 />
                 <p className="text-black font-serif">Up to</p>
                 <p className="text-black  text-[30px]">{item.period}</p>
-                <p className="text-black text-[14px]">
-                  Upload & download speed
-                </p>
-                <p className="text-black text-[25px] font-bold">
+
+                <p className="text-black text-[18px] font-bold">
                   Ksh {item.price}{" "}
-                  <a className="text-[20px] relative top-[-3px]">
+                  <a className="text-[20px] relative top-[-1px]">
                     / {item.validity}
                   </a>
                 </p>

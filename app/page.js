@@ -4,6 +4,7 @@ import { Divider } from "@mui/material";
 import Image from "next/image";
 import React, { useEffect } from "react";
 import { Toaster } from "react-hot-toast";
+import ReactPlayer from "react-player";
 
 const Home = () => {
   function scrollToTop() {
@@ -15,6 +16,7 @@ const Home = () => {
   useEffect(() => {
     scrollToTop();
   }, []);
+
   return (
     <div className=" overflow-hidden w-screen">
       <Toaster
@@ -34,13 +36,7 @@ const Home = () => {
             Why Lumos Classics fiber?
           </p>
           <div className="flex md:justify-evenly xxs:flex-col md:flex-row lg:flex-row xxs:space-y-6 lg:justify-evenly space-x-6">
-            <iframe
-              title="vimeo-player"
-              src="https://player.vimeo.com/video/776714813?h=dc9e7028f6"
-              width="640"
-              height="360"
-              className="xxs:w-screen xxs:h-[200px] md:w-[640px] lg:w-[640px] md:h-[400px] lg:h-[400px] object-contain"
-            ></iframe>
+            <ReactPlayer url="/Fiber.mp4" controls width="100%" height="auto" />
             <div className="">
               <div
                 className="flex space-x-2  justify-center items-center

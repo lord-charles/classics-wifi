@@ -6,6 +6,7 @@ import IconButton from "@mui/material/IconButton";
 
 // import { BsLinkedin, BsGithub, BsYoutube, BsInstagram } from "react-icons/bs";
 import newsletter from "/public/images/newsletter.png";
+import { toast } from "react-hot-toast";
 const Footer = () => {
   return (
     <div
@@ -191,7 +192,7 @@ const Footer = () => {
             {/* stores  */}
             <div className="md:flex lg:flex xxs:block">
               {/* playstore  */}
-              <IconButton>
+              <IconButton onClick={() => toast.success("Coming soon!")}>
                 <div className="flex items-center ">
                   <div className="flex gap-x-1 px-2  py-1 rounded-md bg-gray-100">
                     <Image
@@ -212,7 +213,7 @@ const Footer = () => {
               </IconButton>
 
               {/* apple store  */}
-              <IconButton>
+              <IconButton onClick={() => toast.success("Coming soon!")}>
                 <div className="flex items-center ">
                   <div className="flex gap-x-1 px-2 py-1 rounded-md bg-gray-100">
                     <Image
