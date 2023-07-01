@@ -3,11 +3,17 @@ import { Hero, Packages, Custom, Tabs } from "@/components";
 import { Divider } from "@mui/material";
 import dynamic from "next/dynamic";
 import Image from "next/image";
-import React, { useEffect } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Toaster } from "react-hot-toast";
 import ReactPlayer from "react-player";
 
 const Home = () => {
+  const [isVideoReady, setIsVideoReady] = useState(false);
+
+  const handlePlayerReady = () => {
+    setIsVideoReady(true);
+  };
+
   function scrollToTop() {
     window.scrollTo({
       top: 0,
@@ -42,8 +48,9 @@ const Home = () => {
               controls
               width="100%"
               height="auto"
-              playing
-              Autoplay
+              playing={isVideoReady}
+              onReady={handlePlayerReady}
+              AutoPlay
             />
             <div className="">
               <div
