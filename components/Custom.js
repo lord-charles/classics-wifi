@@ -37,7 +37,7 @@ const Custom = () => {
           {packages2.map((item, index) => {
             return (
               <div
-                className="flex flex-col items-center space-y-3 border p-8 border-purple-500 bg-white rounded-md mb-6 shadow-md"
+                className="flex flex-col items-center space-y-3 border p-6 border-purple-500 bg-white rounded-md mb-6 shadow-md"
                 key={index}
               >
                 <Image
@@ -48,7 +48,7 @@ const Custom = () => {
                   className=""
                 />
                 <p className="text-black font-serif">Up to</p>
-                <p className="text-black  text-[30px] text-center">
+                <p className="text-black  text-[20px] text-center">
                   {item.period} for{" "}
                   {item.validity === "hour"
                     ? "1hour"
@@ -56,7 +56,7 @@ const Custom = () => {
                     ? "3hours"
                     : item.validity === "12hour"
                     ? "24hours"
-                    : item.validity === "24hours"
+                    : item.validity === "24hour"
                     ? "24hours"
                     : item.validity}
                 </p>
