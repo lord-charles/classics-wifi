@@ -106,7 +106,7 @@ const Customerservice = () => {
 
       {/* part1  home*/}
       <div
-        className={`bg-gray-200 w-[16rem] h-[27rem] fixed top-[38vh] right-2 z-[999] rounded-md border border-green-600 transition-all  ${
+        className={`bg-gray-200 w-[16rem] h-[27rem] fixed top-[36vh] right-2 z-[999] rounded-md border border-green-600 transition-all  ${
           !show ? `scale-0  translate-y-[50%] translate-x-[50%]` : `scale-100`
         }`}
       >
