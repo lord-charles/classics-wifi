@@ -88,7 +88,7 @@ const Customerservice = () => {
   return (
     <div className="relative text-black">
       <div
-        className={`fixed top-[77vh] right-2 z-[999]`}
+        className={`fixed top-[78vh] right-2 z-[999]`}
         onClick={() => {
           handleClick({
             vertical: "bottom",
@@ -106,7 +106,7 @@ const Customerservice = () => {
 
       {/* part1  home*/}
       <div
-        className={`bg-gray-200 w-[16rem] h-[27rem] fixed top-[42vh] right-2 z-[999] rounded-md border border-green-600 transition-all  ${
+        className={`bg-gray-200 w-[16rem] h-[27rem] fixed top-[37vh] right-2 z-[999] rounded-md border border-green-600 transition-all  ${
           !show ? `scale-0  translate-y-[50%] translate-x-[50%]` : `scale-100`
         }`}
       >
