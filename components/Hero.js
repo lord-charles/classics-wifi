@@ -14,23 +14,19 @@ const Hero = () => {
               Get your
             </p>
             <p className="lg:text-[60px] md:text-[40px] xxs:text-[28px] text-purple-400 font-bold">
-              first month FREE
+              first week FREE
             </p>
             <p className="text-[26px] text-purple-300">†</p>
           </span>
           <p className="lg:text-[32px] md:text-[20px]  xxs:text-[20px]">
-            when you switch to Lumos 100% Fiber Optic Internet*
-          </p>
-          <p className="lg:text-[15px] md:text-[12px] xxs:text-[11px] xxs:mr-[100px]">
-            †Eligible on (130gb) 20 Mbps plans.*100% Fiber Optic network only
-            available in Classics expansion market.
+            when you switch to any monthly package*
           </p>
         </div>
 
         <div className="relative lg:left-[700px] md:left-[400px] xxs:left-[00px]">
           <Image
             src={"/images2/shop-fiber-2-bg-swoop.svg"}
-            className="object-cover h-[400px] lg:w-[900px] md:w-[700px] xxs:w-[430px]"
+            className="object-cover h-[350px] lg:w-[900px] md:w-[700px] xxs:w-[430px]"
             width={100}
             height={100}
             alt="bg"

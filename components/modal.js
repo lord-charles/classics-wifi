@@ -24,12 +24,9 @@ const style = {
 };
 
 const token =
-  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDIwMDI1ZDJmYWQ2OWIwNzM3MDBhYjgiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2ODYzMTIwMTEsImV4cCI6MTc3MjcxMjAxMX0.r_KLvrWa-BotpCsysEUbRs2iccwetr4SXQ4OcuOqKCA";
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDNkNzcyODhiZDhmMmE2ZmE4ZmE4NDAiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2ODgyMDY0OTYsImV4cCI6MTg2MTAwNjQ5Nn0.c3dXRZtBYG3_HtcTqsXrjPQwT3Q1U1iXkgoweYQZpFE";
 
 export default function NestedModal({ open, setOpen, data }) {
-  const handleOpen = () => {
-    setOpen(true);
-  };
   const handleClose = () => {
     setOpen(false);
   };
@@ -37,7 +34,7 @@ export default function NestedModal({ open, setOpen, data }) {
   const [status, setStatus] = useState("N/A");
 
   const handlePhoneNumberChange = (event) => {
-    const inputNumber = setPhoneNumber(event.target.value);
+    setPhoneNumber(event.target.value);
   };
   // const regex = /^(0[19]\d{8})$/;
 
@@ -201,6 +198,9 @@ export default function NestedModal({ open, setOpen, data }) {
                 </div>
               </IconButton>
             </div>
+            <h2 className="text-red-500 text-[10px] relative top-[13px]">
+              Please stay on this page until the transaction is completed.
+            </h2>
           </div>
         </Box>
       </Modal>

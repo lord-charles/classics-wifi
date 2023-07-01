@@ -1,6 +1,7 @@
 "use client";
 import { Hero, Packages, Custom, Tabs } from "@/components";
 import { Divider } from "@mui/material";
+import dynamic from "next/dynamic";
 import Image from "next/image";
 import React, { useEffect } from "react";
 import { Toaster } from "react-hot-toast";
@@ -36,7 +37,14 @@ const Home = () => {
             Why Lumos Classics fiber?
           </p>
           <div className="flex md:justify-evenly xxs:flex-col md:flex-row lg:flex-row xxs:space-y-6 lg:justify-evenly space-x-6">
-            <ReactPlayer url="/Fiber.mp4" controls width="100%" height="auto" />
+            <ReactPlayer
+              url="/Fiber.mp4"
+              controls
+              width="100%"
+              height="auto"
+              playing
+              Autoplay
+            />
             <div className="">
               <div
                 className="flex space-x-2  justify-center items-center
@@ -125,5 +133,6 @@ const Home = () => {
     </div>
   );
 };
-
-export default Home;
+export default dynamic(() => Promise.resolve(Home), {
+  ssr: false,
+});

@@ -54,7 +54,9 @@ const Custom = () => {
                     ? "1hour"
                     : item.validity === "3hour"
                     ? "3hours"
-                    : item.validity === "24hour"
+                    : item.validity === "12hour"
+                    ? "24hours"
+                    : item.validity === "24hours"
                     ? "24hours"
                     : item.validity}
                 </p>
