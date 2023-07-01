@@ -37,7 +37,7 @@ const Custom = () => {
           {packages2.map((item, index) => {
             return (
               <div
-                className="flex flex-col items-center space-y-3 border p-6 border-purple-500 bg-white rounded-md mb-6 shadow-md"
+                className="flex flex-col items-center space-y-3 border p-6 border-purple-500 bg-white rounded-md mb-6 shadow-md h-[380px]"
                 key={index}
               >
                 <Image
