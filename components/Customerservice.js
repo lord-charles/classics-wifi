@@ -88,7 +88,7 @@ const Customerservice = () => {
   return (
     <div className="relative text-black">
       <div
-        className={`fixed top-[75vh] right-2 z-[999]`}
+        className={`fixed top-[77vh] right-2 z-[999]`}
         onClick={() => {
           handleClick({
             vertical: "bottom",
@@ -98,7 +98,7 @@ const Customerservice = () => {
             setVisibility(true);
         }}
       >
-        <h2 className="text-green-500 text-[11px] font-bold relative top-[55px] left-[90px]">
+        <h2 className="text-green-500 text-[8px] font-bold relative top-[38px] left-[58px]">
           Online
         </h2>
         <Lottie options={defaultOptions} width={90} height={90} />
