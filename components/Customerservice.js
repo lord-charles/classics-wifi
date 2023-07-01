@@ -88,7 +88,7 @@ const Customerservice = () => {
   return (
     <div className="relative text-black">
       <div
-        className={`fixed top-[80vh] right-10 z-[999] hover:animate-bounce cursor-pointer  ${
+        className={`fixed top-[80vh] right-2 z-[999]  cursor-pointer  ${
           visible ? `animate-bounce` : null
         } ${show ? `hidden` : `visible`}`}
         onClick={() => {
@@ -100,15 +100,15 @@ const Customerservice = () => {
             setVisibility(true);
         }}
       >
-        <h2 className="text-green-500 text-[13px] font-bold relative top-[60px] left-[100px]">
+        <h2 className="text-green-500 text-[13px] font-bold relative top-[55px] left-[90px]">
           Online
         </h2>
-        <Lottie options={defaultOptions} width={150} height={150} />
+        <Lottie options={defaultOptions} width={130} height={130} />
       </div>
 
       {/* part1  home*/}
       <div
-        className={`bg-gray-200 w-[20rem] h-[32rem] fixed top-[42vh] right-8 z-[999] rounded-md border border-green-600 transition-all ${
+        className={`bg-gray-200 w-[16rem] h-[27rem] fixed top-[42vh] right-8 z-[999] rounded-md border border-green-600 transition-all  ${
           !show ? `scale-0  translate-y-[50%] translate-x-[50%]` : `scale-100`
         }`}
       >
@@ -122,7 +122,7 @@ const Customerservice = () => {
           x
         </div>
 
-        <div className="bg-green-600 w-[20rem] h-[8rem] rounded-t-md rounded-b-xl">
+        <div className="bg-green-600 w-[16rem] h-[7rem] rounded-t-md rounded-b-xl">
           <motion.div
             variants={slideIn("left", "tween", 0.2, 0.5)}
             initial="hidden"
@@ -193,7 +193,7 @@ const Customerservice = () => {
           </div>
           <Divider light />
 
-          <div className="flex flex-col gap-y-3 p-4">
+          <div className="flex flex-col gap-y-1.5 p-1.5">
             <div
               className="flex gap-3 items-center hover:bg-gray-100 transition-all rounded-md cursor-pointer"
               onClick={() =>
@@ -329,7 +329,7 @@ const Customerservice = () => {
           // initial="hidden"
           // whileInView={`${visibility ? `show` : `hide`}`}
           // viewport={{ once: false, amount: 0.25 }}
-          className="text-[11px] fixed bottom-[15px] left-[4.3rem] text-black"
+          className="text-[10px] fixed bottom-[0px] left-[3.3rem] text-black font-serif"
         >
           Powered by{" "}
           <a
