@@ -88,7 +88,7 @@ const Customerservice = () => {
   return (
     <div className="relative text-black">
       <div
-        className={`fixed top-[80vh] right-2 z-[999]  cursor-pointer  ${
+        className={`fixed top-[75vh] right-2 z-[999]  cursor-pointer  ${
           visible ? `animate-bounce` : null
         } ${show ? `hidden` : `visible`}`}
         onClick={() => {
@@ -103,7 +103,7 @@ const Customerservice = () => {
         <h2 className="text-green-500 text-[13px] font-bold relative top-[55px] left-[90px]">
           Online
         </h2>
-        <Lottie options={defaultOptions} width={130} height={130} />
+        <Lottie options={defaultOptions} width={100} height={100} />
       </div>
 
       {/* part1  home*/}
