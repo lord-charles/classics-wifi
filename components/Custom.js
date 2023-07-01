@@ -37,7 +37,7 @@ const Custom = () => {
           {packages2.map((item, index) => {
             return (
               <div
-                className="flex flex-col items-center space-y-3 border p-4 border-purple-500 bg-white rounded-md mb-6 shadow-md h-[380px] w-[98%]"
+                className="flex flex-col items-center space-y-3 border p-4 border-purple-500 bg-white rounded-md mb-6 shadow-md h-[380px] w-[95%]"
                 key={index}
               >
                 <Image
@@ -55,7 +55,7 @@ const Custom = () => {
                     : item.validity === "3hour"
                     ? "3hours"
                     : item.validity === "12hour"
-                    ? "24hours"
+                    ? "12hours"
                     : item.validity === "24hour"
                     ? "24hours"
                     : item.validity}
@@ -111,6 +111,8 @@ const Custom = () => {
                               ? "7days"
                               : item.validity === "24hour"
                               ? "24hours"
+                              : item.validity === "12hour"
+                              ? "12hours"
                               : item.validity === "3hour"
                               ? "3hours"
                               : item.validity === "hour"
