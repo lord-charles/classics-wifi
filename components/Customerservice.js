@@ -78,11 +78,11 @@ const Customerservice = () => {
     },
   };
 
-  const redirectToWhatsApp = (message) => {
+  const redirectToMessagingApp = (message) => {
     const phoneNumber = "254740315545";
     const encodedMessage = encodeURIComponent(message);
-    const url = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
-    window.open(url, "_blank");
+    const url = `sms:${phoneNumber}?body=${encodedMessage}`;
+    window.location.href = url;
   };
 
   return (
@@ -154,7 +154,7 @@ const Customerservice = () => {
             <Avatar alt="Travis Howard" src="/images/customerService3.jpg" />
             <div
               onClick={() =>
-                redirectToWhatsApp(
+                redirectToMessagingApp(
                   "Hello, could you please assist me in connecting to ClassicsNetPro? Thank you."
                 )
               }
@@ -197,7 +197,7 @@ const Customerservice = () => {
             <div
               className="flex gap-3 items-center hover:bg-gray-100 transition-all rounded-md cursor-pointer"
               onClick={() =>
-                redirectToWhatsApp(
+                redirectToMessagingApp(
                   "Hello, I wanted to let you know that I made a payment, but I haven't received the voucher yet. Can you please help me with this?. "
                 )
               }
@@ -218,7 +218,7 @@ const Customerservice = () => {
             <div
               className="flex gap-3 items-center hover:bg-gray-100 transition-all rounded-md cursor-pointer"
               onClick={() =>
-                redirectToWhatsApp(
+                redirectToMessagingApp(
                   "Hello, am having trouble placing the order. Can you help? "
                 )
               }
@@ -239,7 +239,7 @@ const Customerservice = () => {
             <div
               className="flex gap-3 items-center hover:bg-gray-100 transition-all rounded-md cursor-pointer"
               onClick={() =>
-                redirectToWhatsApp(
+                redirectToMessagingApp(
                   "Hello, I would like to request a custom WiFi package tailored to my specific needs."
                 )
               }
