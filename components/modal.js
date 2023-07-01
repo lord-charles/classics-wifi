@@ -198,7 +198,7 @@ export default function NestedModal({ open, setOpen, data }) {
                 </div>
               </IconButton>
             </div>
-            <h2 className="text-red-500 text-[10px] relative top-[13px]">
+            <h2 className="text-red-500 text-[12px] relative top-[13px]">
               Please stay on this page until the transaction is completed.
             </h2>
           </div>
