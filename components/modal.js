@@ -8,6 +8,7 @@ import { base_url } from "@/utils/baseUrl";
 import config from "@/utils/axiosconfig";
 import axios from "axios";
 import { toast } from "react-hot-toast";
+import { runFireworks } from "./Success";
 
 const style = {
   position: "absolute",
@@ -80,6 +81,7 @@ export default function NestedModal({ open, setOpen, data }) {
         case "COMPLETE":
           return (
             sendCode(),
+            runFireworks(),
             toast.success(
               "Transaction completed. Voucher will be sent via SMS within 10min. Thank you."
             )
@@ -198,9 +200,12 @@ export default function NestedModal({ open, setOpen, data }) {
                 </div>
               </IconButton>
             </div>
-            <h2 className="text-red-500 text-[12px] relative top-[13px]">
-              Please stay on this page until the transaction is completed.
-            </h2>
+            <div className="flex items-center  relative top-[13px] space-x-1">
+              <h2 className="font-bold text-[13px] text-black">NB:</h2>
+              <h2 className="text-red-500 text-[12px]">
+                Wait for transaction completion on this page.
+              </h2>
+            </div>
           </div>
         </Box>
       </Modal>

@@ -1,5 +1,5 @@
 "use client";
-import { Hero, Packages, Custom, Tabs } from "@/components";
+import { Hero, Packages, Custom, Tabs, Customerservice } from "@/components";
 import { Divider } from "@mui/material";
 import dynamic from "next/dynamic";
 import Image from "next/image";
@@ -33,6 +33,7 @@ const Home = () => {
           duration: 10000,
         }}
       />
+      <Customerservice />
 
       <Hero />
       <Packages />
