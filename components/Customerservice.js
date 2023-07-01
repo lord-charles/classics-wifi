@@ -79,7 +79,7 @@ const Customerservice = () => {
   };
 
   const redirectToWhatsApp = (message) => {
-    const phoneNumber = "0740315545";
+    const phoneNumber = "254740315545";
     const encodedMessage = encodeURIComponent(message);
     const url = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
     window.open(url, "_blank");
@@ -108,7 +108,7 @@ const Customerservice = () => {
 
       {/* part1  home*/}
       <div
-        className={`bg-gray-200 w-[16rem] h-[27rem] fixed top-[42vh] right-8 z-[999] rounded-md border border-green-600 transition-all  ${
+        className={`bg-gray-200 w-[16rem] h-[27rem] fixed top-[42vh] right-2 z-[999] rounded-md border border-green-600 transition-all  ${
           !show ? `scale-0  translate-y-[50%] translate-x-[50%]` : `scale-100`
         }`}
       >
