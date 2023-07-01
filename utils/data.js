@@ -11,7 +11,7 @@ export const packages = [
   {
     speed: "8",
     price: "800",
-    devices: "6",
+    devices: "3",
     streaming: "Hd",
     period: "140Gb",
     images: "/images2/wave2.svg",

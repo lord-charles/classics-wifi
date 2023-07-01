@@ -33,7 +33,7 @@ const Packages = () => {
     <div className="bg-gray-100 overflow-hidden w-screen">
       <NestedModal setOpen={setOpen} open={open} data={data} />
       <div className="lg:mx-[300px] md:mx-[10px]">
-        <p className="text-black text-center pt-4 font-serif">
+        <p className="text-black text-center pt-4 font-serif text-[14px]">
           Prefer to order by phone? <a href="#">0740315545 | 0705881279.</a>
         </p>
         <p className="text-black text-[25px] font-serif font-bold text-center relative top-1">
@@ -50,7 +50,7 @@ const Packages = () => {
           </IconButton>
         </div>
 
-        <div className="grid  md:grid-cols-3 lg:grid-cols-3 xxs:grid-cols-2 place-items-center mt-7">
+        <div className="grid  md:grid-cols-3 lg:grid-cols-3 xxs:grid-cols-2 place-items-center mt-6">
           {packages.map((item, index) => {
             return (
               <div
