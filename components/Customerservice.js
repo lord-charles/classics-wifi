@@ -100,7 +100,7 @@ const Customerservice = () => {
             setVisibility(true);
         }}
       >
-        <h2 className="text-green-500 text-[13px] font-bold relative top-[55px] left-[90px]">
+        <h2 className="text-green-500 text-[11px] font-bold relative top-[55px] left-[90px]">
           Online
         </h2>
         <Lottie options={defaultOptions} width={100} height={100} />
