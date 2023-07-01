@@ -71,17 +71,6 @@ const Footer = () => {
                 <IconButton>
                   <a href="#">
                     <Image
-                      src={"/images/fb.png"}
-                      height={35}
-                      width={35}
-                      className="bg-slate-100 p-2 rounded-full"
-                      alt="fb"
-                    />
-                  </a>
-                </IconButton>
-                <IconButton>
-                  <a href="#">
-                    <Image
                       src={"/images/instagram.png"}
                       height={35}
                       width={35}
