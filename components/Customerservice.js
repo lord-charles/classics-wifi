@@ -274,7 +274,7 @@ const Customerservice = () => {
         </motion.div>
 
         <div
-          className={`bg-gray-200 w-[100%] h-[23.5rem] mx-auto rounded-lg fixed top-[110px] z-[999]  overflow-auto
+          className={`bg-gray-200 w-[100%] h-[20rem] mx-auto rounded-lg fixed top-[110px] z-[999]  overflow-auto
           ${!modalShow ? `hidden` : `visible`}
           
           `}
@@ -319,6 +319,53 @@ const Customerservice = () => {
               />
             </motion.div>
           </div>
+
+          <motion.div
+            variants={CategoryVariants}
+            initial="hidden"
+            whileInView="show"
+            className="mt-2 flex flex-col space-y-1"
+          >
+            <div className="bg-white p-0.5 relative top-0 left-0 rounded-sm">
+              <h2 className="text-black text-[14px] font-serif font-bold">
+                User ('Your voucher') has reached uptime limit
+              </h2>
+              <h2 className="text-[11px] text-black">
+                This indicates that you have exceeded your allocated bandwidth
+                or data limit.
+              </h2>
+            </div>
+
+            <div className="bg-white p-0.5 relative top-0 left-0 rounded-sm">
+              <h2 className="text-black text-[14px] font-serif font-bold">
+                User ('Your voucher') has reached traffic limit
+              </h2>
+              <h2 className="text-[11px] text-black">
+                This suggests that you have reached the maximum allowed uptime
+                duration.
+              </h2>
+            </div>
+
+            <div className="bg-white p-0.5 relative top-0 left-0 rounded-sm">
+              <h2 className="text-black text-[14px] font-serif font-bold">
+                No more sessions allowed for ('Your voucher')
+              </h2>
+              <h2 className="text-[11px] text-black">
+                This implies that the user has reached the maximum number of
+                allowed sessions/devices.
+              </h2>
+            </div>
+
+            <div className="bg-white p-0.5 relative top-0 left-0 rounded-sm">
+              <h2 className="text-black text-[14px] font-serif font-bold">
+                Invalid username or password
+              </h2>
+              <h2 className="text-[11px] text-black">
+                This indicates that the entered username or password or Voucher
+                is incorrect or invalid.
+              </h2>
+            </div>
+          </motion.div>
         </div>
 
         {/* footer */}
