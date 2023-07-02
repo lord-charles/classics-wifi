@@ -328,7 +328,7 @@ const Customerservice = () => {
           >
             <div className="bg-white p-0.5 relative top-0 left-0 rounded-sm">
               <h2 className="text-black text-[14px] font-serif font-bold">
-                User ('Your voucher') has reached uptime limit
+                User (&apos;Your voucher&apos;) has reached uptime limit
               </h2>
               <h2 className="text-[11px] text-black">
                 This indicates that you have exceeded your allocated bandwidth
@@ -338,7 +338,7 @@ const Customerservice = () => {
 
             <div className="bg-white p-0.5 relative top-0 left-0 rounded-sm">
               <h2 className="text-black text-[14px] font-serif font-bold">
-                User ('Your voucher') has reached traffic limit
+                User (&apos;Your voucher&apos;) has reached traffic limit
               </h2>
               <h2 className="text-[11px] text-black">
                 This suggests that you have reached the maximum allowed uptime
@@ -347,9 +347,7 @@ const Customerservice = () => {
             </div>
 
             <div className="bg-white p-0.5 relative top-0 left-0 rounded-sm">
-              <h2 className="text-black text-[14px] font-serif font-bold">
-                No more sessions allowed for ('Your voucher')
-              </h2>
+              <h2 className="text-black text-[14px] font-serif font-bold"></h2>
               <h2 className="text-[11px] text-black">
                 This implies that the user has reached the maximum number of
                 allowed sessions/devices.
