@@ -173,7 +173,7 @@ const Customerservice = () => {
           initial="hidden"
           whileInView={`${visibility ? `show` : `hide`}`}
           viewport={{ once: false, amount: 0.25 }}
-          className={`bg-white w-[93%] h-[15rem] mx-auto rounded-lg relative top-[-50px] 
+          className={`bg-white w-[93%] h-[15rem] mx-auto rounded-lg relative top-[-48px] 
           ${modalShow ? `hidden` : `visible`}
           `}
         >
