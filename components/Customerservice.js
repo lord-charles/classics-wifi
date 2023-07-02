@@ -347,7 +347,9 @@ const Customerservice = () => {
             </div>
 
             <div className="bg-white p-0.5 relative top-0 left-0 rounded-sm">
-              <h2 className="text-black text-[14px] font-serif font-bold"></h2>
+              <h2 className="text-black text-[14px] font-serif font-bold">
+                No more sessions allowed for (&apos;Your voucher&apos;)
+              </h2>
               <h2 className="text-[11px] text-black">
                 This implies that the user has reached the maximum number of
                 allowed sessions/devices.
