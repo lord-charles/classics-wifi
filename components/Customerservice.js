@@ -324,9 +324,13 @@ const Customerservice = () => {
             variants={CategoryVariants}
             initial="hidden"
             whileInView="show"
-            className="mt-2 flex flex-col space-y-1"
+            className="mt-1 flex flex-col space-y-1"
           >
-            <div className="bg-white p-0.5 relative top-0 left-0 rounded-sm">
+            <h2 className="text-red-500 text-[16px] relative top-0 left-0 font-serif font-bold">
+              System errors
+            </h2>
+
+            <div className="bg-white  relative top-0 left-0 rounded-sm">
               <h2 className="text-black text-[14px] font-serif font-bold">
                 User (&apos;Your voucher&apos;) has reached uptime limit
               </h2>
