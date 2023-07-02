@@ -382,7 +382,7 @@ const Customerservice = () => {
         >
           Powered by{" "}
           <a
-            href="https://classics-wifi.vercel.app/"
+            href="https://classics-net-pro.vercel.app/"
             target="_blank"
             className="text-purple-500"
           >
