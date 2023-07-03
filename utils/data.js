@@ -14,7 +14,7 @@ export const packages = [
     devices: "3",
     streaming: "1080p",
     period: "140Gb",
-    images: "/images2/wave2.svg",
+    images: "/images2/wave1.svg",
     validity: "month",
   },
   {
@@ -23,7 +23,7 @@ export const packages = [
     devices: "4",
     period: "280Gb",
     streaming: "2160p",
-    images: "/images2/wave1.svg",
+    images: "/images2/wave2.svg",
     validity: "month",
   },
 
@@ -33,7 +33,7 @@ export const packages = [
     devices: "2",
     streaming: "720p",
     period: "40Gb",
-    images: "/images2/wave2.svg",
+    images: "/images2/wave1.svg",
     validity: "week",
   },
   {
@@ -42,7 +42,7 @@ export const packages = [
     devices: "3",
     streaming: "1080p",
     period: "60Gb",
-    images: "/images2/wave2.svg",
+    images: "/images2/wave1.svg",
     validity: "week",
   },
   {
@@ -81,7 +81,7 @@ export const packages2 = [
     devices: "2",
     period: "5Gb",
     streaming: "2160p",
-    images: "/images2/wave1.svg",
+    images: "/images2/wave2.svg",
     validity: "24hour",
   },
   {
