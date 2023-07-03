@@ -34,7 +34,7 @@ const Packages = ({ dataLenths }) => {
     <div className="bg-gray-100 overflow-hidden w-screen">
       <NestedModal setOpen={setOpen} open={open} data={data} />
       <div className="lg:mx-[600px] md:mx-[10px]">
-        <Marquee className="text-purple-500 text-[13px]" speed={40}>
+        <Marquee className="text-purple-500 text-[13px]" speed={45}>
           {"  "}
           {`If your voucher has not been received via SMS from sender ID 23107 | AdvantaSMS within 10min, we kindly request that you promptly contact 0740315545 to obtain your voucher. For any other inquiries, please feel free to
           reach out to Zeph at 0705881279. `}
