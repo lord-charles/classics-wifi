@@ -29,7 +29,7 @@ const Custom = () => {
       <NestedModal setOpen={setOpen} open={open} data={data} />
 
       <div className="lg:mx-[300px] md:mx-[10px] relative top-[20px]">
-        <p className="text-black text-[30px] font-serif font-bold text-center ">
+        <p className="text-black text-[28px] font-serif font-bold text-center ">
           Get more customized packages from us.
         </p>
 
