@@ -33,7 +33,7 @@ const Custom = () => {
           Get more customized packages from us.
         </p>
 
-        <div className="grid   md:grid-cols-3 lg:grid-cols-3 xxs:grid-cols-2 place-items-center mt-8">
+        <div className="grid   md:grid-cols-3 lg:grid-cols-3 xxs:grid-cols-2 place-items-center mt-6">
           {packages2.map((item, index) => {
             return (
               <div
