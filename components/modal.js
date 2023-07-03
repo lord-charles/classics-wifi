@@ -84,7 +84,8 @@ export default function NestedModal({ open, setOpen, data }) {
             runFireworks(),
             toast.success(
               "Transaction completed. Voucher will be sent via SMS within 10min. Thank you."
-            )
+            ),
+            setOpen(false)
           );
         default:
           return toast.error("Something went wrong, please try again");

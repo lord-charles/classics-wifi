@@ -8,6 +8,7 @@ import Image from "next/image";
 import React, { useState } from "react";
 import NestedModal from "./modal";
 import Link from "next/link";
+import Marquee from "react-fast-marquee";
 
 const token =
   "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDIwMDI1ZDJmYWQ2OWIwNzM3MDBhYjgiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2ODYzMTIwMTEsImV4cCI6MTc3MjcxMjAxMX0.r_KLvrWa-BotpCsysEUbRs2iccwetr4SXQ4OcuOqKCA";
@@ -32,8 +33,18 @@ const Packages = () => {
   return (
     <div className="bg-gray-100 overflow-hidden w-screen">
       <NestedModal setOpen={setOpen} open={open} data={data} />
+      <div className="lg:mx-[600px] md:mx-[10px]">
+        <Marquee className="text-purple-500 text-[13px]" speed={40}>
+          {"  "}
+          {`If your voucher has not been received via SMS from sender ID 23107
+          within 10min, we kindly request that you promptly contact 0740315545
+          to obtain your voucher. For any other inquiries, please feel free to
+          reach out to Zeph at 0705881279. `}{" "}
+        </Marquee>
+      </div>
+
       <div className="lg:mx-[300px] md:mx-[10px]">
-        <p className="text-black text-center pt-4 font-serif text-[14px]">
+        <p className="text-black text-center pt-1 font-serif text-[14px]">
           Prefer to order by phone? <a href="#">0740315545 | 0705881279.</a>
         </p>
         <p className="text-black text-[25px] font-serif font-bold text-center relative top-1">
@@ -43,7 +54,7 @@ const Packages = () => {
           <IconButton className="rounded-md">
             <Link
               href={"http://charles.net/login"}
-              className="text-green-500 text-[25px] font-bold font-serif border border-green-500 p-1 rounded-md"
+              className="text-green-500 text-[25px] font-bold font-serif border border-green-600 py-1 px-2 rounded-md animate-pulse shadow-sm shadow-green-500"
             >
               Connect now
             </Link>
