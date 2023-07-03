@@ -61,7 +61,7 @@ export const packages2 = [
     speed: "8",
     price: "7",
     devices: "2",
-    streaming: "720p",
+    streaming: "1080p",
     period: "Unlimited",
     images: "/images2/wave1.svg",
     validity: "hour",

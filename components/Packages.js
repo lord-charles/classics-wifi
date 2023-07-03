@@ -47,9 +47,7 @@ const Packages = () => {
         <p className="text-black text-center pt-1 font-serif text-[14px]">
           Prefer to order by phone? <a href="#">0740315545 | 0705881279.</a>
         </p>
-        <p className="text-black text-[25px] font-serif font-bold text-center relative top-1">
-          How much speed do you need?
-        </p>
+
         <div className="flex justify-center relative top-1">
           <IconButton className="rounded-md">
             <Link

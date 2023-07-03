@@ -335,8 +335,8 @@ const Customerservice = () => {
                 User (&apos;Your voucher&apos;) has reached uptime limit
               </h2>
               <h2 className="text-[11px] text-black">
-                This indicates that you have exceeded your allocated bandwidth
-                or data limit.
+                This suggests that you have reached the maximum allowed uptime
+                duration.
               </h2>
             </div>
 
@@ -345,8 +345,8 @@ const Customerservice = () => {
                 User (&apos;Your voucher&apos;) has reached traffic limit
               </h2>
               <h2 className="text-[11px] text-black">
-                This suggests that you have reached the maximum allowed uptime
-                duration.
+                This indicates that you have exceeded your allocated bandwidth
+                or data limit.
               </h2>
             </div>
 
