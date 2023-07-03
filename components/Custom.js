@@ -6,7 +6,7 @@ import React from "react";
 import NestedModal from "./modal";
 import { useState } from "react";
 
-const Custom = () => {
+const Custom = ({ dataLenths }) => {
   const [open, setOpen] = useState(false);
   const [bandwidth, setBandwidth] = useState(0);
   const [price, setPrice] = useState(0);
@@ -37,7 +37,7 @@ const Custom = () => {
           {packages2.map((item, index) => {
             return (
               <div
-                className="flex flex-col items-center space-y-3 border p-4 border-purple-500 bg-white rounded-md mb-6 shadow-md h-[380px] w-[95%]"
+                className="flex flex-col items-center space-y-3 border p-4 border-purple-500 bg-white rounded-md mb-6 shadow-md h-[400px] w-[95%]"
                 key={index}
               >
                 <Image
@@ -93,6 +93,26 @@ const Custom = () => {
                       alt="images"
                     />
                     <p className="text-black">{item.speed}Mbps(speed)</p>
+                  </div>
+                  <div className=" flex items-center space-x-1">
+                    <Image
+                      src={"/images2/icon-bullet-pointer.svg"}
+                      width={10}
+                      height={10}
+                      alt="images"
+                    />
+                    <p className="text-black">
+                      Units left{" "}
+                      {item.id === 1
+                        ? dataLenths.U1H
+                        : item.id === 2
+                        ? dataLenths.U1H
+                        : item.id === 3
+                        ? dataLenths.GB5
+                        : item.id === 4
+                        ? dataLenths.U12H
+                        : null}
+                    </p>
                   </div>
                   <div className="text-purple-700 mt-[15px]">
                     <Button

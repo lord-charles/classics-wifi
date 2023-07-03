@@ -13,7 +13,7 @@ import Marquee from "react-fast-marquee";
 const token =
   "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDIwMDI1ZDJmYWQ2OWIwNzM3MDBhYjgiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2ODYzMTIwMTEsImV4cCI6MTc3MjcxMjAxMX0.r_KLvrWa-BotpCsysEUbRs2iccwetr4SXQ4OcuOqKCA";
 
-const Packages = () => {
+const Packages = ({ dataLenths }) => {
   const [open, setOpen] = useState(false);
   const [bandwidth, setBandwidth] = useState(0);
   const [price, setPrice] = useState(0);
@@ -63,7 +63,7 @@ const Packages = () => {
           {packages.map((item, index) => {
             return (
               <div
-                className="flex flex-col items-center space-y-3 border p-4 border-purple-500 bg-white rounded-md mb-6 shadow-md w-[95%] h-[360px]"
+                className="flex flex-col items-center space-y-3 border p-4 border-purple-500 bg-white rounded-md mb-6 shadow-md w-[95%] h-[370px]"
                 key={index}
               >
                 <Image
@@ -111,6 +111,30 @@ const Packages = () => {
                       alt="images"
                     />
                     <p className="text-black">{item.speed}Mbps(speed)</p>
+                  </div>
+                  <div className=" flex items-center space-x-1">
+                    <Image
+                      src={"/images2/icon-bullet-pointer.svg"}
+                      width={10}
+                      height={10}
+                      alt="images"
+                    />
+                    <p className="text-black">
+                      Units left{" "}
+                      {item.period === "70Gb"
+                        ? dataLenths.GB70
+                        : item.period === "140Gb"
+                        ? dataLenths.GB140
+                        : item.period === "280Gb"
+                        ? dataLenths.GB280
+                        : item.period === "40Gb"
+                        ? dataLenths.GB40
+                        : item.period === "60Gb"
+                        ? dataLenths.GB60
+                        : item.period === "80Gb"
+                        ? dataLenths.GB80
+                        : null}
+                    </p>
                   </div>
                   <div className="text-purple-700 mt-[15px]">
                     <Button

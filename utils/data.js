@@ -65,6 +65,7 @@ export const packages2 = [
     period: "Unlimited",
     images: "/images2/wave1.svg",
     validity: "hour",
+    id: 1,
   },
   {
     speed: "8",
@@ -74,6 +75,7 @@ export const packages2 = [
     streaming: "1080p",
     images: "/images2/wave1.svg",
     validity: "3hour",
+    id: 2,
   },
   {
     speed: "10",
@@ -83,6 +85,7 @@ export const packages2 = [
     streaming: "2160p",
     images: "/images2/wave1.svg",
     validity: "24hour",
+    id: 3,
   },
   {
     speed: "5",
@@ -92,5 +95,6 @@ export const packages2 = [
     streaming: "720",
     images: "/images2/wave1.svg",
     validity: "12hour",
+    id: 4,
   },
 ];

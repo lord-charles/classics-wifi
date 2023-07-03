@@ -1,6 +1,8 @@
 "use client";
 import { Hero, Packages, Custom, Tabs, Customerservice } from "@/components";
+import { base_url } from "@/utils/baseUrl";
 import { Divider } from "@mui/material";
+import axios from "axios";
 import dynamic from "next/dynamic";
 import Image from "next/image";
 import React, { useEffect, useRef, useState } from "react";
@@ -9,6 +11,104 @@ import ReactPlayer from "react-player";
 
 const Home = () => {
   const [isVideoReady, setIsVideoReady] = useState(false);
+  const [GB70, setGB70] = useState(0);
+  const [GB140, setGB140] = useState(0);
+  const [GB280, setGB280] = useState(0);
+  const [GB40, setGB40] = useState(0);
+  const [GB60, setGB60] = useState(0);
+  const [GB80, setGB80] = useState(0);
+  const [GB5, setGB5] = useState(0);
+  const [U1H, setU1H] = useState(0);
+  const [U3H, setU3H] = useState(0);
+  const [U12H, setU12H] = useState(0);
+
+  const packagesDataLenths = {
+    GB70,
+    GB140,
+    GB280,
+    GB40,
+    GB60,
+    GB80,
+  };
+
+  const customDataLenths = {
+    GB5,
+    U1H,
+    U3H,
+    U12H,
+  };
+
+  const getUnits = async () => {
+    try {
+      const requests = [
+        axios.post(`${base_url}vouchers/by-criteria`, {
+          bandwidth: "80Gb",
+          speed: "10",
+          validity: "7days",
+        }),
+        axios.post(`${base_url}vouchers/by-criteria`, {
+          bandwidth: "70Gb",
+          speed: "5",
+          validity: "30days",
+        }),
+        axios.post(`${base_url}vouchers/by-criteria`, {
+          bandwidth: "280Gb",
+          speed: "10",
+          validity: "30days",
+        }),
+        axios.post(`${base_url}vouchers/by-criteria`, {
+          bandwidth: "140Gb",
+          speed: "8",
+          validity: "30days",
+        }),
+        axios.post(`${base_url}vouchers/by-criteria`, {
+          bandwidth: "50Gb",
+          speed: "5",
+          validity: "12hours",
+        }),
+        axios.post(`${base_url}vouchers/by-criteria`, {
+          bandwidth: "40Gb",
+          speed: "5",
+          validity: "7days",
+        }),
+        axios.post(`${base_url}vouchers/by-criteria`, {
+          bandwidth: "60Gb",
+          speed: "8",
+          validity: "7days",
+        }),
+        axios.post(`${base_url}vouchers/by-criteria`, {
+          bandwidth: "50Gb",
+          speed: "8",
+          validity: "3hours",
+        }),
+        axios.post(`${base_url}vouchers/by-criteria`, {
+          bandwidth: "50Gb",
+          speed: "8",
+          validity: "hour",
+        }),
+        axios.post(`${base_url}vouchers/by-criteria`, {
+          bandwidth: "5Gb",
+          speed: "10",
+          validity: "24hours",
+        }),
+      ];
+
+      const responses = await Promise.all(requests);
+
+      setGB80(responses[0].data.length);
+      setGB70(responses[1].data.length);
+      setGB280(responses[2].data.length);
+      setGB140(responses[3].data.length);
+      setU12H(responses[4].data.length);
+      setGB40(responses[5].data.length);
+      setGB60(responses[6].data.length);
+      setU3H(responses[7].data.length);
+      setU1H(responses[8].data.length);
+      setGB5(responses[9].data.length);
+    } catch (err) {
+      console.log(err);
+    }
+  };
 
   const handlePlayerReady = () => {
     setIsVideoReady(true);
@@ -22,6 +122,7 @@ const Home = () => {
   }
   useEffect(() => {
     scrollToTop();
+    getUnits();
   }, []);
 
   return (
@@ -36,8 +137,8 @@ const Home = () => {
       <Customerservice />
 
       <Hero />
-      <Packages />
-      <Custom />
+      <Packages dataLenths={packagesDataLenths} />
+      <Custom dataLenths={customDataLenths} />
       <div className="py-4 bg-gray-100">
         <div className=" lg:mx-[320px] md:-[10px]">
           <p className="text-black text-center text-[30px] font-serif font-bold py-4">
