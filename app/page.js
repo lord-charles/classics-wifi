@@ -30,7 +30,6 @@ const Home = () => {
     GB60,
     GB80,
   };
-  console.log(packagesDataLenths);
   const customDataLenths = {
     GB5,
     U1H,
