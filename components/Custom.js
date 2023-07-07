@@ -106,7 +106,7 @@ const Custom = ({ dataLenths }) => {
                       {item.id === 1
                         ? dataLenths.U1H
                         : item.id === 2
-                        ? dataLenths.U1H
+                        ? dataLenths.U3H
                         : item.id === 3
                         ? dataLenths.GB5
                         : item.id === 4
