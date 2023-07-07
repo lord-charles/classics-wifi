@@ -69,7 +69,7 @@ export const packages2 = [
   },
   {
     speed: "8",
-    price: "20",
+    price: "19",
     devices: "2",
     period: "Unlimited",
     streaming: "1080p",
