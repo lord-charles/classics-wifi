@@ -61,7 +61,7 @@ const Packages = ({ dataLenths }) => {
           {packages.map((item, index) => {
             return (
               <div
-                className="flex flex-col items-center space-y-3 border p-4 border-purple-500 bg-white rounded-md mb-6 shadow-md w-[95%] h-[370px]"
+                className="flex flex-col items-center space-y-3 border p-4 border-purple-500 bg-white rounded-md mb-6 shadow-md w-[95%] h-[375px]"
                 key={index}
               >
                 <Image

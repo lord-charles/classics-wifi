@@ -36,7 +36,7 @@ const Custom = ({ dataLenths }) => {
           {packages2.map((item, index) => {
             return (
               <div
-                className="flex flex-col items-center space-y-3 border p-4 border-purple-500 bg-white rounded-md mb-6 shadow-md h-[400px] w-[95%]"
+                className="flex flex-col items-center space-y-3 border p-3.5 border-purple-500 bg-white rounded-md mb-6 shadow-md h-[405px] w-[95%]"
                 key={index}
               >
                 <Image
