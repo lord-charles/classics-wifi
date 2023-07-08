@@ -42,7 +42,6 @@ export default function NestedModal({ open, setOpen, data }) {
   // if (regex.test(inputNumber)) {
   //   setPhoneNumber(inputNumber);
   // }
-  console.log(phoneNumber);
   const paymentData = {
     phone_number: `254${phoneNumber}`,
     amount: data.price,
@@ -55,7 +54,6 @@ export default function NestedModal({ open, setOpen, data }) {
     bandwidth: data.bandwidth,
   };
 
-  console.log(smsData);
   const sendCode = async () => {
     await axios.post(`${base_url}/sms/textsms`, smsData);
   };

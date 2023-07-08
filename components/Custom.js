@@ -14,7 +14,6 @@ const Custom = ({ dataLenths }) => {
   const [validity, setValidity] = useState(0);
 
   const data = { bandwidth, price, speed, validity };
-  console.log(data);
 
   const wifipackage = ({ bandwidth, price, speed, validity }) => {
     setBandwidth(bandwidth);
@@ -48,8 +47,8 @@ const Custom = ({ dataLenths }) => {
                   className=""
                 />
                 <p className="text-black font-serif">Up to</p>
-                <p className="text-black  text-[25px] text-center">
-                  {item.period} for{" "}
+                <p className="text-black  text-[23px] text-center">
+                  {item.period === "Unlimited" ? "50Gb" : item.period} for{" "}
                   {item.validity === "hour"
                     ? "1hour"
                     : item.validity === "3hour"

@@ -108,6 +108,7 @@ const Home = () => {
         validity: "24hours",
       });
       setGB5(response10.data.length);
+      console.log(response10);
     } catch (err) {
       console.log(err);
     }
