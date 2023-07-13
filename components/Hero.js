@@ -10,7 +10,7 @@ const Hero = () => {
       <div className="flex lg:ml-[310px] md:ml-[10px]">
         <div className="mt-[100px] absolute pl-1">
           <span className="flex space-x-2">
-            <p className="lg:text-[60px] bg-white md:text-[40px] xxs:text-[28px]">
+            <p className="lg:text-[60px] text-white md:text-[40px] xxs:text-[28px]">
               Get your
             </p>
             <p className="lg:text-[60px] md:text-[40px] xxs:text-[28px] text-purple-400 font-bold">
@@ -18,7 +18,7 @@ const Hero = () => {
             </p>
             <p className="text-[26px] text-purple-300">†</p>
           </span>
-          <p className="lg:text-[32px] md:text-[20px] bg-white  xxs:text-[20px]">
+          <p className="lg:text-[32px] md:text-[20px] text-white  xxs:text-[20px]">
             when you switch to any monthly package*
           </p>
         </div>
