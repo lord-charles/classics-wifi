@@ -61,7 +61,7 @@ const Packages = ({ dataLenths }) => {
           {packages.map((item, index) => {
             return (
               <div
-                className="flex flex-col items-center space-y-3 border p-2 pb-4 border-purple-500 bg-white rounded-md mb-6 shadow-md w-[95%] h-fit"
+                className="flex flex-col items-center space-y-2 border  py-4 border-purple-500 bg-white rounded-md mb-6 shadow-md w-[95%] h-fit "
                 key={index}
               >
                 <Image
@@ -81,59 +81,62 @@ const Packages = ({ dataLenths }) => {
                   </a>
                 </p>
                 <p className="text-black">+ free installation</p>
-                <div>
-                  {" "}
-                  <div className=" flex items-center space-x-1">
-                    <Image
-                      src={"/images2/icon-bullet-pointer.svg"}
-                      width={10}
-                      height={10}
-                      alt="images"
-                    />
-                    <p className="text-black">{item.streaming} streaming</p>
+                <div className="flex flex-col items-center">
+                  <div>
+                    <div className=" flex items-center space-x-1">
+                      <Image
+                        src={"/images2/icon-bullet-pointer.svg"}
+                        width={10}
+                        height={10}
+                        alt="images"
+                      />
+                      <p className="text-black">{item.streaming} streaming</p>
+                    </div>
+
+                    <div className=" flex items-center space-x-1">
+                      <Image
+                        src={"/images2/icon-bullet-pointer.svg"}
+                        width={10}
+                        height={10}
+                        alt="images"
+                      />
+                      <p className="text-black">{item.devices} devices</p>
+                    </div>
+                    <div className=" flex items-center space-x-1">
+                      <Image
+                        src={"/images2/icon-bullet-pointer.svg"}
+                        width={10}
+                        height={10}
+                        alt="images"
+                      />
+                      <p className="text-black">{item.speed}Mbps(speed)</p>
+                    </div>
+                    <div className=" flex items-center space-x-1">
+                      <Image
+                        src={"/images2/icon-bullet-pointer.svg"}
+                        width={10}
+                        height={10}
+                        alt="images"
+                      />
+                      <p className="text-black">
+                        Units left{" "}
+                        {item.period === "70Gb"
+                          ? dataLenths.GB70
+                          : item.period === "140Gb"
+                          ? dataLenths.GB140
+                          : item.period === "280Gb"
+                          ? dataLenths.GB280
+                          : item.period === "40Gb"
+                          ? dataLenths.GB40
+                          : item.period === "60Gb"
+                          ? dataLenths.GB60
+                          : item.period === "80Gb"
+                          ? dataLenths.GB80
+                          : null}
+                      </p>
+                    </div>
                   </div>
-                  <div className=" flex items-center space-x-1">
-                    <Image
-                      src={"/images2/icon-bullet-pointer.svg"}
-                      width={10}
-                      height={10}
-                      alt="images"
-                    />
-                    <p className="text-black">{item.devices} devices</p>
-                  </div>
-                  <div className=" flex items-center space-x-1">
-                    <Image
-                      src={"/images2/icon-bullet-pointer.svg"}
-                      width={10}
-                      height={10}
-                      alt="images"
-                    />
-                    <p className="text-black">{item.speed}Mbps(speed)</p>
-                  </div>
-                  <div className=" flex items-center space-x-1">
-                    <Image
-                      src={"/images2/icon-bullet-pointer.svg"}
-                      width={10}
-                      height={10}
-                      alt="images"
-                    />
-                    <p className="text-black">
-                      Units left{" "}
-                      {item.period === "70Gb"
-                        ? dataLenths.GB70
-                        : item.period === "140Gb"
-                        ? dataLenths.GB140
-                        : item.period === "280Gb"
-                        ? dataLenths.GB280
-                        : item.period === "40Gb"
-                        ? dataLenths.GB40
-                        : item.period === "60Gb"
-                        ? dataLenths.GB60
-                        : item.period === "80Gb"
-                        ? dataLenths.GB80
-                        : null}
-                    </p>
-                  </div>
+
                   <div className="text-purple-700 mt-[15px]">
                     <Button
                       variant="outlined"

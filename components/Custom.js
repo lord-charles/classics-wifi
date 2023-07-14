@@ -36,7 +36,7 @@ const Custom = ({ dataLenths }) => {
           {packages2.map((item, index) => {
             return (
               <div
-                className="flex flex-col items-center space-y-3 border p-2 border-purple-500 bg-white rounded-md mb-6 shadow-md h-fit pb-4 w-[95%]"
+                className="flex flex-col items-center space-y-2 border border-purple-500 bg-white rounded-md mb-6 shadow-md h-fit py-4 w-[95%]"
                 key={index}
               >
                 <Image
@@ -64,54 +64,55 @@ const Custom = ({ dataLenths }) => {
                   Ksh {item.price}{" "}
                 </p>
                 <p className="text-black">+ free installation</p>
-                <div>
-                  {" "}
-                  <div className=" flex items-center space-x-1">
-                    <Image
-                      src={"/images2/icon-bullet-pointer.svg"}
-                      width={10}
-                      height={10}
-                      alt="images"
-                    />
-                    <p className="text-black">{item.streaming} streaming</p>
-                  </div>
-                  <div className=" flex items-center space-x-1">
-                    <Image
-                      src={"/images2/icon-bullet-pointer.svg"}
-                      width={10}
-                      height={10}
-                      alt="images"
-                    />
-                    <p className="text-black">{item.devices} devices</p>
-                  </div>
-                  <div className=" flex items-center space-x-1">
-                    <Image
-                      src={"/images2/icon-bullet-pointer.svg"}
-                      width={10}
-                      height={10}
-                      alt="images"
-                    />
-                    <p className="text-black">{item.speed}Mbps(speed)</p>
-                  </div>
-                  <div className=" flex items-center space-x-1">
-                    <Image
-                      src={"/images2/icon-bullet-pointer.svg"}
-                      width={10}
-                      height={10}
-                      alt="images"
-                    />
-                    <p className="text-black">
-                      Units left{" "}
-                      {item.id === 1
-                        ? dataLenths.U1H
-                        : item.id === 2
-                        ? dataLenths.U3H
-                        : item.id === 3
-                        ? dataLenths.GB5
-                        : item.id === 4
-                        ? dataLenths.U12H
-                        : null}
-                    </p>
+                <div className="flex flex-col items-center">
+                  <div>
+                    <div className=" flex items-center space-x-1">
+                      <Image
+                        src={"/images2/icon-bullet-pointer.svg"}
+                        width={10}
+                        height={10}
+                        alt="images"
+                      />
+                      <p className="text-black">{item.streaming} streaming</p>
+                    </div>
+                    <div className=" flex items-center space-x-1">
+                      <Image
+                        src={"/images2/icon-bullet-pointer.svg"}
+                        width={10}
+                        height={10}
+                        alt="images"
+                      />
+                      <p className="text-black">{item.devices} devices</p>
+                    </div>
+                    <div className=" flex items-center space-x-1">
+                      <Image
+                        src={"/images2/icon-bullet-pointer.svg"}
+                        width={10}
+                        height={10}
+                        alt="images"
+                      />
+                      <p className="text-black">{item.speed}Mbps(speed)</p>
+                    </div>
+                    <div className=" flex items-center space-x-1">
+                      <Image
+                        src={"/images2/icon-bullet-pointer.svg"}
+                        width={10}
+                        height={10}
+                        alt="images"
+                      />
+                      <p className="text-black">
+                        Units left{" "}
+                        {item.id === 1
+                          ? dataLenths.U1H
+                          : item.id === 2
+                          ? dataLenths.U3H
+                          : item.id === 3
+                          ? dataLenths.GB5
+                          : item.id === 4
+                          ? dataLenths.U12H
+                          : null}
+                      </p>
+                    </div>
                   </div>
                   <div className="text-purple-700 mt-[15px]">
                     <Button
