@@ -61,7 +61,7 @@ const Packages = ({ dataLenths }) => {
           {packages.map((item, index) => {
             return (
               <div
-                className="flex flex-col items-center space-y-3 border p-4 border-purple-500 bg-white rounded-md mb-6 shadow-md w-[95%] h-[375px]"
+                className="flex flex-col items-center space-y-3 border p-2 pb-4 border-purple-500 bg-white rounded-md mb-6 shadow-md w-[95%] h-fit"
                 key={index}
               >
                 <Image
@@ -74,7 +74,7 @@ const Packages = ({ dataLenths }) => {
                 <p className="text-black font-serif">Up to</p>
                 <p className="text-black  text-[30px]">{item.period}</p>
 
-                <p className="text-black text-[16px] font-bold">
+                <p className="text-purple-600 text-[16px] font-bold font-serif">
                   Ksh {item.price}{" "}
                   <a className="text-[16px] relative top-[-1px]">
                     / {item.validity}

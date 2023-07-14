@@ -36,7 +36,7 @@ const Custom = ({ dataLenths }) => {
           {packages2.map((item, index) => {
             return (
               <div
-                className="flex flex-col items-center space-y-3 border p-3.5 border-purple-500 bg-white rounded-md mb-6 shadow-md h-[405px] w-[95%]"
+                className="flex flex-col items-center space-y-3 border p-2 border-purple-500 bg-white rounded-md mb-6 shadow-md h-fit pb-4 w-[95%]"
                 key={index}
               >
                 <Image
@@ -47,7 +47,7 @@ const Custom = ({ dataLenths }) => {
                   className=""
                 />
                 <p className="text-black font-serif">Up to</p>
-                <p className="text-black  text-[23px] text-center">
+                <p className="text-[16px] font-serif text-purple-600 text-center font-bold">
                   {item.period === "Unlimited" ? "50Gb" : item.period} for{" "}
                   {item.validity === "hour"
                     ? "1hour"
